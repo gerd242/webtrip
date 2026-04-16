@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OktainBrav Adventure</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    /* ================= RESET ================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0f172a;
+    color:#f1f5f9;
+    line-height:1.6;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* ================= HEADER ================= */
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(15,23,42,0.8);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    z-index:1000;
+}
+
+header h1{
+    font-size:22px;
+    font-weight:600;
+    color:#ffd700;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#f1f5f9;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ffd700;
+}
+
+
+/* ================= HERO ================= */
+.hero{
+    height:70vh;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    margin-top:90px;
+}
+
+.overlay h2{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.overlay p{
+    font-size:18px;
+    opacity:0.9;
+}
+
+.overlay button{
+    margin-top:30px;
+    padding:14px 35px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(45deg,#ffd700,#ffb703);
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* ================= DESTINASI ================= */
+.destinasi,
+.paket{
+    padding:100px 60px;
+    text-align:center;
+}
+
+.destinasi h2,
+.paket h2{
+    font-size:36px;
+    margin-bottom:40px;
+    color:#ffd700;
+}
+
+.grid-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:20px 0 10px;
+    color:#ffd700;
+}
+
+.card p{
+    padding:0 20px 25px;
+    font-size:14px;
+    opacity:0.8;
+}
+
+/* ================= PAKET ================= */
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#1e293b;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+th, td{
+    padding:18px;
+    text-align:center;
+}
+
+th{
+    background:#ffd700;
+    color:black;
+}
+
+/* ================= FOOTER ================= */
+footer{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    padding:60px 10%;
+    margin-top:80px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.social-icons{
+    display:flex;
+    gap:15px;
+}
+
+.social-icons a{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#1e293b;
+    color:#ffd700;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:40px;
+    font-size:14px;
+    opacity:0.7;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>OktainBrav Adventure</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#destinasi">Destinasi</a></li>
+            <li><a href="#paket">Paket</a></li>
+            <li><a href="#footer">Contact</a></li>
+        </ul>
+        <a href="login.php" class="btn-login">Login</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero">
+    <div class="overlay">
+        <h2>Jelajahi Keindahan Wisata Daerah</h2>
+        <p>Temukan destinasi terbaik dan paket wisata menarik</p>
+        <button>Jelajahi</button>
+    </div>
+</section>
+
+<section id="destinasi" class="destinasi">
+    <h2>Destinasi Populer</h2>
+    <div class="grid-container">
+
+        <article class="card">
+            <img src="https://wonderfulborobudurtours.com/storage/app/uploads/public/5d1/c80/b34/5d1c80b346230162974052.jpg">
+            <h3>Gunung Bromo</h3>
+            <p>Gunung Bromo dengan pemandangan alam yang indah.</p>
+        </article>
+
+        <article class="card">
+            <img src="https://cda.1001malam.com/uploads/landmarks/d11cd37f9ba6ac20918ca51073798b98098123ab.jpg">
+            <h3>Candi Prambanan</h3>
+            <p>Candi Prambanan dengan vibes yang sangat sejuk dan indah.</p>
+        </article>
+
+        <article class="card">
+            <img src="https://www.indonesia.travel/link/eebe7606599041eba2552244d49a1f90.aspx" alt="Coffee Shop">
+            <h3>Candi Borobudur</h3>
+            <p>Candi Borobudur dengan pemandangan alam yang indah.</p>
+        </article>
+
+</div>
+</section>
+<section id="paket" class="paket">
+    <h2>Paket Wisata</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama Paket</th>
+                <th>Durasi</th>
+                <th>Fasilitas</th>
+                <th>Harga</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Paket Hemat</td>
+                <td>2 Hari 1 Malam</td>
+                <td>Hotel, Transport</td>
+                <td>Rp 750.000</td>
+            </tr>
+            <tr>
+                <td>Paket Keluarga</td>
+                <td>3 Hari 2 Malam</td>
+                <td>Hotel, Transport, Makan</td>
+                <td>Rp 1.500.000</td>
+            </tr>
+            <tr>
+                <td>Paket Premium</td>
+                <td>4 Hari 3 Malam</td>
+                <td>Hotel Bintang 4, Transport, Tour Guide</td>
+                <td>Rp 2.500.000</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+</main>
+
+<footer id="footer">
+    <div class="footer-container">
+        <div>
+            <h2>OktainBrav <span style="color:#ffd700;">Adventure</span></h2>
+            <p>Jelajahi Dunia, Ciptakan Cerita.</p>
+        </div>
+
+        <div>
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 OktainBrav Adventure. Build by GERRAD.</p>
+    </div>
+</footer>
+
+</body>
+</html>
